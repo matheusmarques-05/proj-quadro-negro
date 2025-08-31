@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro Negro Matemático</title>
+    <link rel="stylesheet" href="style-principal.css">
+    <link rel="stylesheet" href="style-contas.css">
+</head>
+<body>
+    <h1>Multiplicando</h1>
+    <input type="number" name="txtn5" id="txtn5"> x
+    <input type="number" name="txtn6" id="txtn6">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <div id="res"><strong>Resultado</strong></div>
+
+    <hr>
+
+    <p><a href="qn_soma.html">Ir para Soma</a></p>
+    <p><a href="qn_sub.html">Ir para Subtração</a></p>
+    <p><a href="qn_div.html">Ir para Divisão</a></p>
+    <p><a href="quadro_negro_principal.html">Voltar ao Menu</a></p>
+
+    <p style="margin-top: 170px; text-align: right;" ><strong>Scripts by Math &#128513;</strong></p>
+
+    <script>
+        function multiplicar(){
+            var tn1 = window.document.getElementById('txtn5')
+            var tn2 = window.document.querySelector('input#txtn6')
+            var res = window.document.querySelector('div#res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 * n2
+            res.innerHTML = `A diferença entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+        }
+    </script>
+</body>
+</html>
